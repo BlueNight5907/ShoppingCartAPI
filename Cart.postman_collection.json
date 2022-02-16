@@ -1,0 +1,1080 @@
+{
+	"info": {
+		"_postman_id": "06be961f-89f5-4ac8-b4b9-908536df2b37",
+		"name": "Cart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"testuser\",\r\n    \"password\":\"123456\",\r\n    \"confirmPassword\":\"123456\",\r\n    \"email\":\"henrypoter22@gmail.com\",\r\n    \"firstName\":\"Huy\",\r\n    \"lastName\":\"Nguyen\",\r\n    \"telephone\":\"0376466945\",\r\n    \"address\":\"abc\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpIn0sImlhdCI6MTYzOTMzMDE4NiwiZXhwIjoxNjM5NDE2NTg2fQ.LTMEG-zAXLbhXduuJsXF8-JpWoaiSfR893Q9lvRkG5k",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"123456\",\r\n    \"username\":\"testuser\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpIn0sImlhdCI6MTYzOTU5MTQyMCwiZXhwIjoxNjM5Njc3ODIwfQ.T-V9ZNnRXu_1Wan-syaCYIAxSG5ii2QyxliUmREXCSA",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "abc",
+							"value": "fjhhdskjfhd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh token",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpIn0sImlhdCI6MTYzOTU5MTQyMCwiZXhwIjoxNjM5Njc3ODIwfQ.T-V9ZNnRXu_1Wan-syaCYIAxSG5ii2QyxliUmREXCSA",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImRhdGEiOiIifSwiaWF0IjoxNjM5Mzk1NDkxLCJleHAiOjE2NDE5ODc0OTF9.w4RlleiZUF266DotMnkLXZoKGhWeyQbshXUyhKso0jw\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Homepage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Upload product picture",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpMTIzIn0sImlhdCI6MTYzOTU1ODA5OSwiZXhwIjoxNjM5NjQ0NDk5fQ.xS8vNfSzhuJEn3I9axwN1KwsNkwKugUynfGDoBNhFbg",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productPicture",
+							"type": "file",
+							"src": "/C:/Users/NguyenHuy/Pictures/17932425.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add product(user)",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpMSJ9LCJpYXQiOjE2MzkzMzA1NjAsImV4cCI6MTYzOTQxNjk2MH0.BNSI-2udN2YwdJIZHI-2JAjDgdnawx0fzegr-sd50HI",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product(Admin)",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpIn0sImlhdCI6MTYzOTU5MTQyMCwiZXhwIjoxNjM5Njc3ODIwfQ.T-V9ZNnRXu_1Wan-syaCYIAxSG5ii2QyxliUmREXCSA",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Quần hoa màu đỏ",
+							"type": "text"
+						},
+						{
+							"key": "desc",
+							"value": "Đây là áo phông 2d",
+							"type": "text"
+						},
+						{
+							"key": "productPicture",
+							"value": "/public/images/products/163933491016817932425.png",
+							"type": "text"
+						},
+						{
+							"key": "categoryID",
+							"value": "61b62a02c7a28727ec32734a",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/61bb1d30487f295f8af4400a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"61bb1d30487f295f8af4400a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/pages/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"pages",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Product(Admin)",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpIn0sImlhdCI6MTYzOTU5MTQyMCwiZXhwIjoxNjM5Njc3ODIwfQ.T-V9ZNnRXu_1Wan-syaCYIAxSG5ii2QyxliUmREXCSA",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Áo phông đẳng cấp vũ trụ 2\",\r\n    \"desc\": \"Đây là áo phông\",\r\n    \"price\": 10000,\r\n    \"productPicture\": \"/public/images/products/1639387223336b01f1f8e-3b85-47be-91a2-9a82195e33e5_scaled.jpg\",\r\n    \"tags\": [\r\n        \"61b6db49a94fd6896a89fbb7\", \"61b6ab49a94fd6896a89fbb6\"\r\n        ],\r\n    \"active\": true,\r\n    \"categoryID\":\"61b7302a3ddb657a9c5590be\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/61b733fd8aee51bfb97882e2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"61b733fd8aee51bfb97882e2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete product",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpIn0sImlhdCI6MTYzOTU5MTQyMCwiZXhwIjoxNjM5Njc3ODIwfQ.T-V9ZNnRXu_1Wan-syaCYIAxSG5ii2QyxliUmREXCSA",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/61ba45333386753c7244f93c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"61ba45333386753c7244f93c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All tags",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Add tag",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpIn0sImlhdCI6MTYzOTUxMDg1NiwiZXhwIjoxNjM5NTk3MjU2fQ.FhfOEjqi9OzufQ9gfQVXvGvqR7atcG7MDRh9D26Zu7s",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Áo xinh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tag",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tag"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Tag",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpIn0sImlhdCI6MTYzOTU5MTQyMCwiZXhwIjoxNjM5Njc3ODIwfQ.T-V9ZNnRXu_1Wan-syaCYIAxSG5ii2QyxliUmREXCSA",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Áo xinh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tag/61ba3c543386753c7244f906",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tag",
+						"61ba3c543386753c7244f906"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Add category",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpIn0sImlhdCI6MTYzOTUxMDg1NiwiZXhwIjoxNjM5NTk3MjU2fQ.FhfOEjqi9OzufQ9gfQVXvGvqR7atcG7MDRh9D26Zu7s",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Ao khoác\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update category",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpIn0sImlhdCI6MTYzOTUxMDg1NiwiZXhwIjoxNjM5NTk3MjU2fQ.FhfOEjqi9OzufQ9gfQVXvGvqR7atcG7MDRh9D26Zu7s",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Nón quai thao\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/category/61b7302a3ddb657a9c5590bf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"category",
+						"61b7302a3ddb657a9c5590bf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Category",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpIn0sImlhdCI6MTYzOTMzMDE4NiwiZXhwIjoxNjM5NDE2NTg2fQ.LTMEG-zAXLbhXduuJsXF8-JpWoaiSfR893Q9lvRkG5k",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Áo xinh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/category/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"category",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cart Infor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpIn0sImlhdCI6MTYzOTU2MDUwMCwiZXhwIjoxNjM5NjQ2OTAwfQ.sSfohHEOhLtjrOmJT44Tudzc70Y5EnHUY4xMZFYS55E",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productID",
+							"value": "61b733fd8aee51bfb97882e2",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product to Cart",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpIn0sImlhdCI6MTYzOTU2MDUwMCwiZXhwIjoxNjM5NjQ2OTAwfQ.sSfohHEOhLtjrOmJT44Tudzc70Y5EnHUY4xMZFYS55E",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productID",
+							"value": "61b733fd8aee51bfb97882e2",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cart/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cart",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subtract Product Quantity in Cart",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpMTIzIn0sImlhdCI6MTYzOTU1ODA5OSwiZXhwIjoxNjM5NjQ0NDk5fQ.xS8vNfSzhuJEn3I9axwN1KwsNkwKugUynfGDoBNhFbg",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productID",
+							"value": "61b733fd8aee51bfb97882e2",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cart/subtract",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cart",
+						"subtract"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Product Quantity in Cart",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpIn0sImlhdCI6MTYzOTU2MDUwMCwiZXhwIjoxNjM5NjQ2OTAwfQ.sSfohHEOhLtjrOmJT44Tudzc70Y5EnHUY4xMZFYS55E",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productID",
+							"value": "61b733fd8aee51bfb97882e2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cart/remove/61b733fd8aee51bfb97882e2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cart",
+						"remove",
+						"61b733fd8aee51bfb97882e2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create order",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpIn0sImlhdCI6MTYzOTU2MDUwMCwiZXhwIjoxNjM5NjQ2OTAwfQ.sSfohHEOhLtjrOmJT44Tudzc70Y5EnHUY4xMZFYS55E",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productID",
+							"value": "61b733fd8aee51bfb97882e2",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/order/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"order",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find order",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiSHV5ZGVwemFpIn0sImlhdCI6MTYzOTU2MDUwMCwiZXhwIjoxNjM5NjQ2OTAwfQ.sSfohHEOhLtjrOmJT44Tudzc70Y5EnHUY4xMZFYS55E",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productID",
+							"value": "61b733fd8aee51bfb97882e2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "quantity",
+							"value": "6",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/order/61b9b64d6bfbfaa514497419",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"order",
+						"61b9b64d6bfbfaa514497419"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get orderlist",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoidGVzdHVzZXIifSwiaWF0IjoxNjM5NjAwNDQ4LCJleHAiOjE2Mzk2ODY4NDh9.WVeByAWwg3gc8aXGuQCu95mOD1mGoKuArMTE-uGHEFc",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x_authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productID",
+							"value": "61b733fd8aee51bfb97882e2",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
